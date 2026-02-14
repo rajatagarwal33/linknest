@@ -6,9 +6,10 @@ This project was built as part of a technical assignment and focuses on correctn
 
 ---
 
-## 🔗 Live Demo
+##  Live Demo
 
 **Live URL:** https://linknest-virid.vercel.app/
+
 You can log in using any Google account to test the app.
 
 **GitHub Repository:**  
@@ -16,7 +17,7 @@ https://github.com/rajatagarwal33/linknest
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 - **Next.js** (App Router)
 - **Supabase**
@@ -28,7 +29,7 @@ https://github.com/rajatagarwal33/linknest
 
 ---
 
-## ✨ Features
+##  Features
 
 - Google OAuth login (no email/password)
 - Add bookmarks (title + URL)
@@ -40,7 +41,7 @@ https://github.com/rajatagarwal33/linknest
 
 ---
 
-## 🔐 Authentication & Data Privacy
+##  Authentication & Data Privacy
 
 Authentication is handled using Supabase Google OAuth.
 
@@ -52,14 +53,14 @@ If a user is not authenticated, they cannot access the dashboard.
 
 ---
 
-## 🔄 Realtime Updates
+##  Realtime Updates
 
 The app uses Supabase Realtime to listen for changes on the `bookmarks` table.  
 If a bookmark is added or deleted in one tab, all other open tabs update automatically without requiring a page refresh.
 
 ---
 
-## ⚙️ Problems I Faced & How I Solved Them
+##  Problems I Faced & How I Solved Them
 
 ### Realtime updates not showing without refresh
 Initially, whenever I added or deleted a bookmark, the UI only updated after refreshing the page. This became very noticeable when testing the app in two tabs — changes in one tab were not reflected in the other.
