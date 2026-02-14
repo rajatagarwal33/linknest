@@ -8,7 +8,7 @@ This project was built as part of a technical assignment and focuses on correctn
 
 ## 🔗 Live Demo
 
-**Live URL:** https://linknest.vercel.app  
+**Live URL:** https://linknest-virid.vercel.app/
 You can log in using any Google account to test the app.
 
 **GitHub Repository:**  
