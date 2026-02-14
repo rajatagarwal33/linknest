@@ -62,35 +62,35 @@ If a bookmark is added or deleted in one tab, all other open tabs update automat
 
 ##  Problems I Faced & How I Solved Them
 
-### Realtime updates not showing without refresh
+### Problem 1) Realtime updates not showing without refresh
 Initially, whenever I added or deleted a bookmark, the UI only updated after refreshing the page. This became very noticeable when testing the app in two tabs — changes in one tab were not reflected in the other.
 
 I solved this by using Supabase Realtime subscriptions and listening to `postgres_changes` on the `bookmarks` table. Whenever an insert or delete event occurs, the app refetches the latest bookmarks, keeping all open tabs in sync.
 
 ---
 
-### Duplicate bookmarks appearing temporarily
+### Problem 2) Duplicate bookmarks appearing temporarily
 At one point, when adding a bookmark, it appeared twice in the UI, but after refreshing the page it showed up only once. This was confusing and clearly incorrect behavior.
 
 The issue was caused by a mix of optimistic UI updates and realtime updates both modifying the state. I fixed this by making the realtime subscription the single source of truth for syncing data and ensuring state updates were handled consistently.
 
 ---
 
-### Google OAuth configuration in production
+### Problem 3) Google OAuth configuration in production
 Google authentication worked correctly during local development, but required additional configuration after deploying the app.
 
 I resolved this by properly setting the Site URL and Redirect URLs in Supabase to match the Vercel production domain. After that, authentication worked reliably in both environments.
 
 ---
 
-### Keeping the UI simple but complete
+### Problem 4 ) Keeping the UI simple but complete
 While the app itself is small, I wanted it to feel complete and usable rather than like a rough demo. Finding the right balance between minimal design and usability took some iteration.
 
 I added a navigation bar with user context and logout functionality, kept the color palette consistent, and avoided over-designing the interface.
 
 ---
 
-## 🧪 Running the Project Locally
+##  Running the Project Locally
 
 ```bash
 npm install
